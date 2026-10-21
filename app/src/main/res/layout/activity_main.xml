@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/bg_screen"
+    android:paddingStart="18dp"
+    android:paddingEnd="18dp"
+    android:paddingTop="20dp"
+    android:paddingBottom="12dp">
+
+    <!-- Tiêu đề -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="THƯ VIỆN CỦA TÔI"
+        android:textColor="@color/primary"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        android:letterSpacing="0.02"
+        android:layout_marginBottom="4dp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Không gian đọc sách của riêng bạn"
+        android:textColor="@color/text_secondary"
+        android:textSize="14sp"
+        android:layout_marginBottom="18dp" />
+
+    <!-- Thẻ thống kê -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/bg_card"
+        android:padding="18dp"
+        android:elevation="2dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="TỔNG QUAN THƯ VIỆN"
+            android:textColor="@color/text_secondary"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            android:letterSpacing="0.06"
+            android:layout_marginBottom="8dp" />
+
+        <TextView
+            android:id="@+id/tvThongKe"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Tổng số sách: 0&#10;Số sách đã đọc: 0&#10;Số sách chưa đọc xong: 0"
+            android:textColor="@color/text_primary"
+            android:textSize="15sp"
+            android:lineSpacingExtra="7dp" />
+    </LinearLayout>
+
+    <!-- Tiêu đề danh sách -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Sách của bạn"
+        android:textColor="@color/text_primary"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_marginTop="22dp"
+        android:layout_marginBottom="10dp" />
+
+    <!-- Danh sách sách -->
+    <ListView
+        android:id="@+id/lvDanhSachSach"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@android:color/transparent"
+        android:divider="@android:color/transparent"
+        android:dividerHeight="12dp"
+        android:paddingBottom="8dp"
+        android:clipToPadding="false"
+        android:scrollbars="vertical" />
+
+    <!-- Nút thêm sách -->
+    <Button
+        android:id="@+id/btnThemSach"
+        android:layout_width="match_parent"
+        android:layout_height="54dp"
+        android:text="+   THÊM SÁCH MỚI"
+        android:textColor="@android:color/white"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        android:background="@drawable/bg_button_primary"
+        android:backgroundTint="@null"
+        android:stateListAnimator="@null"
+        android:elevation="3dp"
+        android:layout_marginTop="10dp" />
+
+</LinearLayout>

@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:background="@drawable/bg_screen"
+    android:clipToPadding="false">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Thêm sách mới"
+            android:textColor="@color/primary"
+            android:textSize="27sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Bổ sung một cuốn sách vào thư viện của bạn."
+            android:textColor="@color/text_secondary"
+            android:textSize="14sp"
+            android:layout_marginTop="6dp"
+            android:layout_marginBottom="20dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="18dp"
+            android:background="@drawable/bg_card"
+            android:elevation="2dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="THÔNG TIN SÁCH"
+                android:textColor="@color/primary"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                android:letterSpacing="0.05"
+                android:layout_marginBottom="18dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Tên sách *"
+                android:textColor="@color/text_primary"
+                android:textStyle="bold"
+                android:textSize="14sp"
+                android:layout_marginBottom="7dp" />
+
+            <EditText
+                android:id="@+id/edtTenSach"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:paddingStart="13dp"
+                android:paddingEnd="13dp"
+                android:hint="Ví dụ: Đắc nhân tâm"
+                android:inputType="textCapSentences"
+                android:singleLine="true"
+                android:textSize="15sp"
+                android:background="@drawable/bg_input" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Tác giả *"
+                android:textColor="@color/text_primary"
+                android:textStyle="bold"
+                android:textSize="14sp"
+                android:layout_marginTop="17dp"
+                android:layout_marginBottom="7dp" />
+
+            <EditText
+                android:id="@+id/edtTacGia"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:paddingStart="13dp"
+                android:paddingEnd="13dp"
+                android:hint="Nhập tên tác giả"
+                android:inputType="textCapWords"
+                android:singleLine="true"
+                android:textSize="15sp"
+                android:background="@drawable/bg_input" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Thể loại sách"
+                android:textColor="@color/text_primary"
+                android:textStyle="bold"
+                android:textSize="14sp"
+                android:layout_marginTop="17dp"
+                android:layout_marginBottom="7dp" />
+
+            <Spinner
+                android:id="@+id/spTheLoai"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:paddingStart="8dp"
+                android:paddingEnd="8dp"
+                android:background="@drawable/bg_input" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Tình trạng đọc"
+                android:textColor="@color/text_primary"
+                android:textStyle="bold"
+                android:textSize="14sp"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="8dp" />
+
+            <RadioGroup
+                android:id="@+id/rgTinhTrang"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RadioButton
+                    android:id="@+id/rbChuaDoc"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Chưa đọc"
+                    android:textColor="@color/text_primary"
+                    android:buttonTint="@color/primary"
+                    android:checked="true"
+                    android:paddingVertical="5dp" />
+
+                <RadioButton
+                    android:id="@+id/rbDangDoc"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Đang đọc"
+                    android:textColor="@color/text_primary"
+                    android:buttonTint="@color/primary"
+                    android:paddingVertical="5dp" />
+
+                <RadioButton
+                    android:id="@+id/rbDaDoc"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Đã đọc"
+                    android:textColor="@color/text_primary"
+                    android:buttonTint="@color/primary"
+                    android:paddingVertical="5dp" />
+            </RadioGroup>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Bạn đánh giá cuốn sách này thế nào?"
+                android:textColor="@color/text_primary"
+                android:textStyle="bold"
+                android:textSize="14sp"
+                android:layout_marginTop="18dp"
+                android:layout_marginBottom="5dp" />
+
+            <RatingBar
+                android:id="@+id/rbDanhGia"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:numStars="5"
+                android:rating="0"
+                android:stepSize="1"
+                android:isIndicator="false"
+                android:progressTint="@color/accent"
+                android:secondaryProgressTint="@color/border" />
+
+            <TextView
+                android:id="@+id/tvSoSao"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0/5 sao"
+                android:textColor="@color/text_secondary"
+                android:textSize="13sp"
+                android:layout_marginTop="2dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Ghi chú (không bắt buộc)"
+                android:textColor="@color/text_primary"
+                android:textStyle="bold"
+                android:textSize="14sp"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="7dp" />
+
+            <EditText
+                android:id="@+id/edtGhiChu"
+                android:layout_width="match_parent"
+                android:layout_height="110dp"
+                android:padding="13dp"
+                android:hint="Cảm nhận hoặc nội dung cần ghi nhớ..."
+                android:gravity="top|start"
+                android:inputType="textMultiLine|textCapSentences"
+                android:textSize="14sp"
+                android:background="@drawable/bg_input" />
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btnLuuSach"
+            android:layout_width="match_parent"
+            android:layout_height="54dp"
+            android:text="LƯU SÁCH"
+            android:textColor="@android:color/white"
+            android:textStyle="bold"
+            android:textSize="15sp"
+            android:background="@drawable/bg_button_primary"
+            android:backgroundTint="@null"
+            android:stateListAnimator="@null"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="12dp" />
+
+    </LinearLayout>
+</ScrollView>
